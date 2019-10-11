@@ -1,0 +1,10 @@
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\bin\Debug\Test.exe.config
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\bin\Debug\Test.exe
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\bin\Debug\Test.pdb
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\bin\Debug\Entidades.dll
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\bin\Debug\Entidades.pdb
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\obj\Debug\Test.exe
+C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\Test\obj\Debug\Test.pdb
