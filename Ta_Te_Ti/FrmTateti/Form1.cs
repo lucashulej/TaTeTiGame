@@ -13,6 +13,7 @@ namespace FrmTateti
     public partial class FrmTateti : Form
     {
         Button[] listaBotones = new Button[9];
+        private int turno = 0;
         
         public FrmTateti()
         {
@@ -25,51 +26,102 @@ namespace FrmTateti
                 listaBotones[j] = c.ElementAt(i);
                 j++;
             }
+            this.checkBox_PvsC.Checked = true;
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
             Button boton = (Button)sender;
-            if (boton.Text == "")
+            this.checkBox_PvsP.Enabled = false;
+            this.checkBox_PvsC.Enabled = false;
+
+            if (this.checkBox_PvsC.Checked) //PLAYER VS COMPUTER
             {
-                boton.Text = "X";
-                boton.BackColor = Color.Aqua;
-                boton.Enabled = false;
-                if(Chequear("X") == false) //SI NO SE GANO JUEGA MAQUINA
+                if (boton.Text == "")
                 {
-                    if(this.existeLugar()) 
+                    boton.Text = "X";
+                    boton.BackColor = Color.Aqua;
+                    boton.Enabled = false;
+                    if (this.chequear("X") == false) //SI NO SE GANO JUEGA MAQUINA
                     {
-                        this.ClickEnemigo();
-                        if(Chequear("O") == false)
+                        if (this.existeLugar())
                         {
-                            if(this.existeLugar() == false)
+                            this.clickEnemigo();
+                            if (this.chequear("O") == false)
                             {
-                                MessageBox.Show("Empate");
+                                if (this.existeLugar() == false)
+                                {
+                                    MessageBox.Show("Empate");
+                                    this.reiniciar();
+                                }
                             }
+                            else
+                            {
+                                MessageBox.Show("Perdiste");
+                                this.reiniciar();
+                            }
+                        }
+                        else //SI NO HYA MAS LUGAR SE REINICIA
+                        {
+                            MessageBox.Show("Empate");
+                            this.reiniciar();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("GANASTE");
+                        this.reiniciar();
+                    }
+                }
+            }
+            else //PLAYER VS PLAYER
+            {
+                if (boton.Text == "") 
+                {
+                    if (this.turno % 2 == 0) //JUGADOR 1
+                    {
+                        boton.Text = "X";
+                        boton.BackColor = Color.Aqua;
+                        boton.Enabled = false;
+                        if (this.chequear("X"))
+                        {
+                            MessageBox.Show("Gano la X");
+                            this.reiniciar();
                         }
                         else
                         {
-                            MessageBox.Show("Perdiste");
-                            this.Reiniciar();
+                            if (this.existeLugar() == false)
+                            {
+                                MessageBox.Show("Empate");
+                                this.reiniciar();
+                            }
                         }
                     }
-                    else //SI NO HYA MAS LUGAR SE REINICIA
+                    else //JUGADOR 2
                     {
-                        MessageBox.Show("Empate");
-                        this.Reiniciar();
+                        boton.Text = "O";
+                        boton.BackColor = Color.Red;
+                        boton.Enabled = false;
+                        if (this.chequear("O"))
+                        {
+                            MessageBox.Show("Gano la O");
+                            this.reiniciar();
+                        }
+                        else
+                        {
+                            if (this.existeLugar() == false)
+                            {
+                                MessageBox.Show("Empate");
+                                this.reiniciar();
+                            }
+                        }
                     }
+                    this.turno++;
                 }
-                else
-                {
-                    MessageBox.Show("GANASTE");
-                    this.Reiniciar();
-                }
-                
-
             }
         }
         
-        private bool Chequear(string letra)
+        private bool chequear(string letra)
         {
             //FILAS
             if(btn1.Text == letra && btn2.Text == letra && btn3.Text == letra)
@@ -117,7 +169,7 @@ namespace FrmTateti
             return false;
         }
 
-        private void Reiniciar()
+        private void reiniciar()
         {
             foreach (Button boton in this.listaBotones)
             {
@@ -125,9 +177,12 @@ namespace FrmTateti
                 boton.BackColor = Color.LightGray;
                 boton.Enabled = true;
             }
+            this.checkBox_PvsP.Enabled = true;
+            this.checkBox_PvsC.Enabled = true;
+            this.turno = 0;
         }
 
-        private void ClickEnemigo()
+        private void clickEnemigo()
         {
             Random numero = new Random();
             Button boton;
@@ -151,6 +206,16 @@ namespace FrmTateti
                 }
             }
             return retorno;
+        }
+
+        private void CheckBox_PvsP_CheckedChanged(object sender, EventArgs e)
+        {
+            this.checkBox_PvsC.Checked = !this.checkBox_PvsP.Checked;
+        }
+
+        private void CheckBox_PvsC_CheckedChanged(object sender, EventArgs e)
+        {
+            this.checkBox_PvsP.Checked = !this.checkBox_PvsC.Checked;
         }
     }
 }
