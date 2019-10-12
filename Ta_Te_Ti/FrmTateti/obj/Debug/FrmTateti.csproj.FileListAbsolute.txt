@@ -8,3 +8,13 @@ C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.exe
 C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.pdb
 C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.csprojAssemblyReference.cache
 C:\Users\Lucas\Desktop\Ta_Te_Ti\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.FrmTateti.resources
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\bin\Debug\FrmTateti.exe.config
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\bin\Debug\FrmTateti.exe
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\bin\Debug\FrmTateti.pdb
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.FrmTateti.resources
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.Properties.Resources.resources
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.csproj.GenerateResource.cache
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.exe
+C:\Users\Lucas\Desktop\TaTeTiGame\Ta_Te_Ti\FrmTateti\obj\Debug\FrmTateti.pdb
